@@ -1,18 +1,20 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
   loop();
-  background(220);
+  background('#000000');
 }
 
 function draw() {
-  // doubleVerticalLine(200, 0, 400);
-  doubleVerticalLine(frameCount, frameCount, random() * 80, random() * 20 )
+  stroke(0);
+  stroke('#ff0000');
+  noFill();
+  doubleCirclePattern(frameCount, frameCount, random() * 100, random() * 30)
 }
 
-function doubleVerticalLine(leftX,leftY,lenght, dist){
-  line(leftX,leftY, leftX, leftY+lenght);
-  line(leftX+dist,leftY, leftX+dist, leftY+lenght);
+function doubleCirclePattern(leftX,leftY,lenght, dist){
+  ellipse(leftX,leftY, leftX, leftY+lenght);
+  ellipse(leftX+dist,leftY, leftX+dist, leftY+lenght);
 }
 function mouseClicked(){
-  doubleVerticalLine(mouseX,mouseY, random() * 80, random() * 20);
+  doubleCirclePattern(mouseX,mouseY, random() * 10, random() * 20);
 }
