@@ -1,10 +1,10 @@
-const x = 0;
+let angle = 0;
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
   strokeWeight(10);
   stroke(0);
-  background('#000000');
+  background('black');
 }
 
 function touchMoved() {
@@ -20,4 +20,8 @@ function draw() {
 
 function mouseClicked(){
   doubleCirclePattern(mouseX,mouseY, random() * 10, random() * 20);
+}
+
+function rotaion() { 
+
 }
